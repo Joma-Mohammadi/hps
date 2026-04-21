@@ -22,7 +22,7 @@ export default function Hero() {
 
             {/* Background */}
             <Image
-                src="/service-man-instelling-house-heating-system-floor.jpg"
+                src="/2.jpg"
                 alt="Underfloor heating"
                 fill
                 priority
