@@ -1,6 +1,6 @@
 "use client";
 import { CiLocationOn } from "react-icons/ci";
-import { FaPhoneAlt, } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import { LuShield } from "react-icons/lu";
 import { WiThermometerExterior } from "react-icons/wi";
@@ -18,9 +18,7 @@ const heroContent = {
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen overflow-hidden flex items-start">
-
-            {/* Background */}
+        <section className="relative w-full min-h-screen lg:min-h-205 2xl:min-h-225 overflow-hidden flex items-center">
             <Image
                 src="/2.jpg"
                 alt="Underfloor heating"
@@ -29,37 +27,25 @@ export default function Hero() {
                 className="object-cover object-top brightness-50"
             />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-linear-to-r from-blue-900/90 via-blue-900/80 to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-blue-900/90 via-blue-900/80 to-transparent " />
 
-            {/* Content */}
-            <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-white w-full">
-
-
-                <div className="max-w-2xl -ml-2.5 sm:-ml-5 md:-ml-15 lg:-ml-25">
-
-                    {/* Badge */}
-                    <div className="inline-flex items-center gap-2 bg-orange-500/10 text-orange-400 px-4 py-2 rounded-full text-sm mb-6">
-                        <CiLocationOn className="w-5 h-5" />
+            <div className="m-auto relative z-10 max-w-350 xl:max-w-375 2xl:max-w-400 mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-14 md:py-16 lg:py-18 xl:py-20 text-white w-full">
+                <div className="max-w-xl md:max-w-2xl xl:max-w-3xl ml-0 sm:ml-6 md:ml-10 lg:ml-16 xl:ml-20 2xl:ml-24 flex flex-col justify-center gap-5 md:gap-6">
+                    <div className="inline-flex max-w-fit items-center gap-2 bg-orange-500/10 text-orange-400 px-3 py-2 rounded-full text-xs sm:text-sm mb-5">
+                        <CiLocationOn className="w-4 h-4 sm:w-5 sm:h-5" />
                         {heroContent.badge}
                     </div>
 
-                    {/* Title */}
-                    <h1 className="text-4xl md:text-6xl font-bold leading-16 mb-4">
-                        {heroContent.title}
-                        <br />
-                        <span className="text-orange-500">
-                            {heroContent.highlight}
-                        </span>
+                    <h1 className="text-[30px] leading-[1.15] sm:text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold mb-0">
+                        <span className="block whitespace-nowrap">{heroContent.title}</span>
+                        <span className="block text-orange-500 whitespace-nowrap">{heroContent.highlight}</span>
                     </h1>
 
-                    {/* Description */}
-                    <p className="text-lg text-gray-200 max-w-xl mb-8">
+                    <p className="text-sm sm:text-base md:text-lg 2xl:text-xl text-gray-200 max-w-xl mb-0">
                         {heroContent.description}
                     </p>
 
-                    {/* Features */}
-                    <div className="flex flex-wrap gap-6 text-sm text-gray-200 mb-8">
+                    <div className="flex flex-col md:flex-row gap-3 md:gap-5 text-sm text-gray-200 mb-0">
                         <div className="flex items-center gap-2">
                             <LuShield className="text-orange-400 w-5 h-5" />
                             Certified Engineers
@@ -70,27 +56,22 @@ export default function Hero() {
                         </div>
                     </div>
 
-
-                    <div className="flex gap-3 mb-6 flex-nowrap sm:flex-wrap">
-
-                        <button className=" flex items-center justify-center gap-2 hover:cursor-pointer bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-semibold shadow text-sm sm:text-base">
+                    <div className="flex flex-col md:flex-row gap-3 mb-0">
+                        <button className="w-full md:w-auto flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-semibold shadow text-sm sm:text-base">
                             <FaPhoneAlt className="w-4 h-4" />
                             Call {heroContent.phone}
                         </button>
 
-                        <button className=" flex items-center justify-center gap-2 hover:cursor-pointer border-2 border-gray-400  text-white px-4 py-3 rounded-lg font-semibold hover:bg-white/10 text-sm sm:text-base">
+                        <button className="w-full md:w-auto flex items-center justify-center gap-2 border-2 border-gray-400 text-white px-4 py-3 rounded-lg font-semibold hover:bg-white/10 text-sm sm:text-base">
                             <HiOutlineChatBubbleLeftRight className="w-5 h-5" />
                             Get a Free Quote
                         </button>
-
                     </div>
 
-                    {/* Notice */}
-                    <div className="inline-flex items-center gap-2 bg-green-600/20 text-green-400 mt-5 px-4 py-2 rounded-lg text-sm">
-                        <span className="w-2 h-2 bg-green-400  rounded-full "></span>
+                    <div className="inline-flex max-w-fit items-center gap-2 bg-green-600/20 text-green-400 mt-4 px-4 py-2 rounded-lg text-xs sm:text-sm">
+                        <span className="w-2 h-2 bg-green-400 rounded-full" />
                         {heroContent.notice}
                     </div>
-
                 </div>
             </div>
         </section>

@@ -36,8 +36,8 @@ export default function FAQ() {
 
     return (
         <section className="bg-[#0b438f] py-12 md:py-16">
-            <div className=" max-w-290 px-4">
-                <h2 className="text-white text-2xl md:text-3xl font-bold tracking-[-0.03em] ">
+            <div className="max-w-5xl px-4 sm:px-6 md:px-8 lg:px-10  xl:max-w-290 xl:m-auto 2xl:m-auto 2xl:max-w-290 ">
+                <h2 className="text-white text-2xl md:text-3xl font-bold tracking-[-0.03em]">
                     Frequently Asked Questions
                 </h2>
 
@@ -49,14 +49,21 @@ export default function FAQ() {
                             <div key={item.id} className="rounded-[14px] bg-[#4a4d73] overflow-hidden">
                                 <button
                                     onClick={() => setOpenId(isOpen ? null : item.id)}
-                                    className="hover:cursor-pointer w-full flex items-center justify-between px-8 md:px-10 py-4 text-left text-white font-semibold text-sm md:text-md"
+                                    className="hover:cursor-pointer w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 py-4 text-left text-white font-semibold text-sm md:text-md gap-4"
                                 >
-                                    <span>{item.question}</span>
-                                    <FaChevronDown className={`text-lg shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`} />
+                                    <span className="flex-1">{item.question}</span>
+
+                                    <FaChevronDown
+                                        className={`text-lg shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
+                                            }`}
+                                    />
                                 </button>
 
-                                <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}>
-                                    <div className="px-8 md:px-10 pb-6 text-white/90 text-[17px] leading-7">
+                                <div
+                                    className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                                        }`}
+                                >
+                                    <div className="px-4 sm:px-6 md:px-8 lg:px-10 pb-6 text-white/90 text-[15px] sm:text-[16px] md:text-[17px] leading-6 md:leading-7">
                                         {item.answer}
                                     </div>
                                 </div>
