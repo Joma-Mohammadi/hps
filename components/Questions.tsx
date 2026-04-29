@@ -35,7 +35,7 @@ export default function FAQ() {
     const [openId, setOpenId] = useState<number | null>(null)
 
     return (
-        <section className="bg-[#0b438f] py-12 md:py-16">
+        <section className="bg-[#074677] py-12 md:py-16">
             <div className="max-w-5xl px-4 sm:px-6 md:px-8 lg:px-10  xl:max-w-290 xl:m-auto 2xl:m-auto 2xl:max-w-290 ">
                 <h2 className="text-white text-2xl md:text-3xl font-bold tracking-[-0.03em]">
                     Frequently Asked Questions
