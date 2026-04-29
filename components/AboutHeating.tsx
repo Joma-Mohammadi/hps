@@ -20,7 +20,7 @@ const data = {
 export default function ServiceDetails() {
     return (
         <section className="bg-gray-100 py-16 md:py-20">
-            <div className="max-w-450 mx-auto px-6">
+            <div className="max-w-7xl xl:w-7xl lg:max-w-6xl 2xl:max-w-400 mx-auto px-6">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -36,7 +36,7 @@ export default function ServiceDetails() {
                             </p>
                         ))}
 
-                        <h3 className="text-xl font-semibold mb-4">
+                        <h3 className="text-xl font-semibold mb-4 text-gray-800">
                             Our UnderFloor Heating Services:
                         </h3>
 
